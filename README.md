@@ -107,3 +107,5 @@ You will see the connection attempts and some useful debugging info.
 https://howtoforge.com/linux_dialin_server
 
 https://forums.raspberrypi.com/viewtopic.php?t=132542
+
+https://hereirestinremorse.wordpress.com/tag/ubuntu-10-04-varlogmessages/
