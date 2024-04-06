@@ -8,7 +8,7 @@ sudo apt install mgetty mgetty-fix mgetty-voice wvdial
 ```
 
 1. ```sudo apt wvdial``` will find the modem
-2. ```cat /etc/wfdial.conf``` will now show your device
+2. ```cat /etc/wfdial.conf``` will now show your device on the line that says ```Modem = ```
 
 # References:
 https://howtoforge.com/linux_dialin_server
