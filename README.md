@@ -43,9 +43,11 @@ sudo systemctl enable mgetty.service
 8. Turn On PPP Dial In Service
 Mgetty by default will not invoke PPP, it is commented out in the /etc/mgetty+sendfax/login.config file. We need this service so IP packets can flow across the dial-in connection. 
 
-```vi /etc/mgetty+sendfax/login.config```
+```sudo vi /etc/mgetty/login.config```
+
 Look for a line:
 ```#/AutoPPP/ - a_ppp /usr/sbin/pppd auth -chap +pap login debug```
+
 Change to
 
 ```/AutoPPP/ - a_ppp /usr/sbin/pppd auth -chap +pap login debug ```
