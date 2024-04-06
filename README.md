@@ -31,14 +31,16 @@ WantedBy=multi-user.target
 sudo ln -s /lib/systemd/system/mgetty.service /etc/systemd/system/mgetty.service
 ```
 
-5. then i could start the service:
+5. then i could start the service
+
 ```sudo systemctl start mgetty.service```
 
-6. to make it autostart (not sure if it works at this time)
+7. to make it autostart (not sure if it works at this time)
 ```
 sudo systemctl enable mgetty.service
 ```
 
 # References:
 https://howtoforge.com/linux_dialin_server
+
 https://forums.raspberrypi.com/viewtopic.php?t=132542
