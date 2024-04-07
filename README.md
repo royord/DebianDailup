@@ -91,11 +91,17 @@ sudo apt install mgetty mgetty-fix mgetty-voice wvdial
     We now want Linux to be a router and allow packets to flow through it. This is called packet forwarding.
     
     ```vi /etc/sysctl.conf```
+
+    Now make sure that the following line is enabled:
     ```
-    net.ipv4.ip_forward  = 1 
+    net.ipv4.ip_forward  = 1
+    ```
+
+    Now restart the service
+    ```
     sysctl -e -p /etc/sysctl.conf
     ```
-10. Start Mgetty
+11. Start Mgetty
     Tell the init to re-read its config file (/etc/inittab) and start up mgetty on the modems. 
     
     ```/sbin/telinit q```
