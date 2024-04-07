@@ -84,7 +84,7 @@ sudo apt install mgetty mgetty-fix mgetty-voice wvdial
     sohail               *               boby                  *
     zain                 *               zain123               *
     ```
-    8 Create Linux Users
+8. Create Linux Users
     Now, create some regular linux users that correspond to the /etc/ppp/pap-secrets file. Use the same password that has been entered in that file. If you do not want to do this step then you must remove the "login" option from the command line of ppp kept in /etc/mgetty+sendfax/login.config. 
 
 9. Turn On Routing
