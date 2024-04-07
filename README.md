@@ -108,7 +108,7 @@ sudo apt install mgetty mgetty-fix mgetty-voice wvdial
 11. Test Dial In and View Logs
     Have someone try dialing in on Phone number attached to modem and you can watch the logs live by typing this: 
     
-    ```tail -f /var/log/messages```
+    ```tail -f /var/log/syslog```
     You will see the connection attempts and some useful debugging info.
 
 # References:
