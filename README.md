@@ -105,7 +105,7 @@ sudo apt install mgetty mgetty-fix mgetty-voice wvdial
     Tell the init to re-read its config file (/etc/inittab) and start up mgetty on the modems. 
     
     ```/sbin/telinit q```
-11 Test Dial In and View Logs
+11. Test Dial In and View Logs
     Have someone try dialing in on Phone number attached to modem and you can watch the logs live by typing this: 
     
     ```tail -f /var/log/messages```
