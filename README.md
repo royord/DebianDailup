@@ -11,34 +11,34 @@ sudo apt install mgetty mgetty-fix mgetty-voice wvdial
 2. ```cat /etc/wfdial.conf``` will now show your device on the line that says ```Modem = ```
 3. make this file: /lib/systemd/system/mgetty.service
 
-```[Unit]
-Description=Smart Modem Getty(mgetty)
-Documentation=man:mgetty(8)
-Requires=systemd-udev-settle.service
-After=systemd-udev-settle.service
-
-[Service]
-Type=simple
-ExecStart=/sbin/mgetty -x 0 /dev/ttyACM0
-Restart=always
-PIDFile=/var/run/mgetty.pid.ttyACM0
-
-[Install]
-WantedBy=multi-user.target
-```
+    ```[Unit]
+    Description=Smart Modem Getty(mgetty)
+    Documentation=man:mgetty(8)
+    Requires=systemd-udev-settle.service
+    After=systemd-udev-settle.service
+    
+    [Service]
+    Type=simple
+    ExecStart=/sbin/mgetty -x 0 /dev/ttyACM0
+    Restart=always
+    PIDFile=/var/run/mgetty.pid.ttyACM0
+    
+    [Install]
+    WantedBy=multi-user.target
+    ```
 4. then i needed a link:
-```
-sudo ln -s /lib/systemd/system/mgetty.service /etc/systemd/system/mgetty.service
-```
+    ```
+    sudo ln -s /lib/systemd/system/mgetty.service /etc/systemd/system/mgetty.service
+    ```
 
 5. then i could start the service
 
-```sudo systemctl start mgetty.service```
+    ```sudo systemctl start mgetty.service```
 
 7. to make it autostart (not sure if it works at this time)
-```
-sudo systemctl enable mgetty.service
-```
+    ```
+    sudo systemctl enable mgetty.service
+    ```
 
 8. Turn On PPP Dial In Service
     Mgetty by default will not invoke PPP, it is commented out in the /etc/mgetty+sendfax/login.config file. We need this service so IP packets can flow across the dial-in connection. 
