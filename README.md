@@ -117,3 +117,5 @@ https://howtoforge.com/linux_dialin_server
 https://forums.raspberrypi.com/viewtopic.php?t=132542
 
 https://hereirestinremorse.wordpress.com/tag/ubuntu-10-04-varlogmessages/
+
+http://mgetty.greenie.net/doc/Inittab.html#Inittab
